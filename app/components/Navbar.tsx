@@ -58,7 +58,7 @@ export const Navbar = () => {
               alt="Dormigen Logo"
               width={64}
               height={64}
-              className="object-contain w-12 h-12 md:w-16 md:h-16 transform scale-125"
+              className="object-contain w-10 h-10 md:w-16 md:h-16"
             />
             <span className="text-xl font-bold tracking-tighter font-manrope">
               DORMIGEN®

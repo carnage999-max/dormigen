@@ -186,7 +186,7 @@ export const ImageLightbox = ({ src, alt, title, description, className }: Premi
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-contain transition-transform duration-700 group-hover:scale-105 p-4"
         />
         <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/40 transition-all duration-500" />
         

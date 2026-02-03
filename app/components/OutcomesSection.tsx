@@ -35,7 +35,7 @@ export const OutcomesSection = () => {
               key={item.id} 
               className="p-0 overflow-hidden group flex flex-col h-full bg-navy/40 border-white/10"
             >
-              <div className="relative aspect-video w-full overflow-hidden">
+              <div className="relative aspect-[4/3] md:aspect-video w-full overflow-hidden bg-navy/20">
                 <ImageLightbox 
                   src={item.image} 
                   alt={item.title} 

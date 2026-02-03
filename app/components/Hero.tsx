@@ -29,13 +29,11 @@ export const Hero = ({ onBuyClick }: HeroProps) => {
           transition={{ duration: 1 }}
           className="flex justify-center mb-10 md:mb-12"
         >
-          <div className="relative w-48 h-48 md:w-72 md:h-72 drop-shadow-[0_0_50px_rgba(70,152,218,0.5)]">
-            <Image
+          <div className="relative w-[280px] h-[120px] md:w-[600px] md:h-[240px] border-4 border-white overflow-hidden drop-shadow-[0_0_60px_rgba(70,152,218,0.6)]">
+            <img
               src="/dormigen-logo.png"
               alt="Dormigen Logo"
-              fill
-              className="object-contain rounded-[40px] md:rounded-[60px]"
-              priority
+              className="absolute inset-0 w-full h-full object-cover scale-[1.05]"
             />
           </div>
         </motion.div>
