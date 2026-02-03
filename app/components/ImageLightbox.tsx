@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
-import { X, Download, Share2, Info, ChevronRight, Maximize2 } from "lucide-react";
+import { X, Download, Share2, Info, Maximize2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -33,6 +33,46 @@ export const ImageLightbox = ({ src, alt, title, description, className }: Premi
       };
     }
   }, [isOpen]);
+
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      const response = await fetch(src);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${title.toLowerCase().replace(/\s+/g, "-")}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
+  const handleShare = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `Dormigen - ${title}`,
+          text: description,
+          url: window.location.href,
+        });
+      } catch (error) {
+        console.error("Share failed:", error);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+      } catch (error) {
+        console.error("Clipboard failed:", error);
+      }
+    }
+  };
 
   const modalContent = (
     <AnimatePresence>
@@ -75,10 +115,18 @@ export const ImageLightbox = ({ src, alt, title, description, className }: Premi
           >
             <div className="flex items-center justify-between mb-8 lg:mb-12">
               <div className="flex gap-3">
-                <button className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-navy">
+                <button 
+                  onClick={handleShare}
+                  className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-navy"
+                  title="Share"
+                >
                   <Share2 size={20} />
                 </button>
-                <button className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-navy">
+                <button 
+                  onClick={handleDownload}
+                  className="p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-navy"
+                  title="Download"
+                >
                   <Download size={20} />
                 </button>
               </div>
@@ -104,11 +152,11 @@ export const ImageLightbox = ({ src, alt, title, description, className }: Premi
               <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-6 leading-tight font-manrope">
                 {title}
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 text-[15px]">
                 {description}
               </p>
 
-              <div className="p-6 bg-medical/5 rounded-3xl border border-medical/10 mb-8">
+              <div className="p-6 bg-medical/5 rounded-3xl border border-medical/10 mb-8 mt-auto">
                 <div className="flex gap-4 items-start">
                   <Info className="text-medical shrink-0 mt-1" size={20} />
                   <div>
@@ -119,17 +167,6 @@ export const ImageLightbox = ({ src, alt, title, description, className }: Premi
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-auto pt-8 border-t border-gray-100 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-xs">D</div>
-                <div>
-                  <div className="font-bold text-navy text-sm">Dormigen®</div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Official Library</div>
-                </div>
-              </div>
-              <ChevronRight className="text-gray-300" />
             </div>
           </motion.div>
         </motion.div>
