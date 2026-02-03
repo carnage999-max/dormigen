@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #303063;
+  --color-navy: #080C20;
+  --color-medical: #4698DA;
+  --color-mid-blue: #3C67AC;
+  --color-silver: #C7CED9;
+  
+  --font-inter: "Inter", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+
+  --radius-ios: 24px;
+}
+
+:root {
+  --background: #080C20; /* Navy default */
+  --foreground: #FFFFFF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+}
+
+.glass-panel {
+  background: #080C20; /* Fully opaque Navy */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ios-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(199, 206, 217, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ios-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px 0 rgba(70, 152, 218, 0.2);
+}
+
+/* Diagonal Dividers */
+.diagonal-ur {
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.diagonal-dr {
+  clip-path: polygon(0 0, 100% 100px, 100% 100%, 0% 100%);
+}
+
+/* For top edges */
+.diagonal-mask-top-ur {
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.diagonal-mask-bottom-dr {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), 0% 100%);
+}
+
+/* Overlap helper */
+.section-overlap {
+  position: relative;
+  margin-top: -100px;
+  padding-top: 100px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

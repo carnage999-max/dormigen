@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dormigen® — EBV Suppression System
 
-## Getting Started
+A premium one-page marketing site for Dormigen®, built with Next.js 15, TypeScript, Tailwind CSS v4, and Framer Motion.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **3D Graphics**: React Three Fiber + Drei (Three.js)
+- **Icons**: Lucide React
+- **Contact Form**: Resend API
+- **Language**: TypeScript
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
+- **Premium Medical Aesthetic**: Deep violet and navy palette with medical blue accents.
+- **Motion System**: High-end scroll reveals and smooth spring transitions.
+- **3D Background**: Interactive particle and helix visuals in the hero section.
+- **Diagonal Layout**: Custom diagonal section dividers using CSS clip-paths.
+- **iOS-style Design**: Glassmorphism, backdrop blurs, and soft-bordered cards.
+- **Functional Components**:
+  - Sticky glass navbar with mobile spring dropdown.
+  - Interactive "Buy Now" modal with bundle selection.
+  - Product breakdown with medical-grade UI.
+  - Responsive contact form with Resend integration.
+  - Accessible FAQ accordion.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository** (if applicable) or enter the project directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+   *(If you don't have pnpm, use `npm install` or `yarn`)*
 
-## Learn More
+3. **Configure Environment Variables**:
+   Create a `.env.local` file in the root directory and add your Resend API key:
+   ```env
+   RESEND_API_KEY=re_your_api_key_here
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the development server**:
+   ```bash
+   pnpm dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Open the site**:
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design Alignment
+- **Colors**: Sourced from the Dormigen brand guide (Primary Deep Violet #303063, Navy #080C20, Medical Blue #4698DA).
+- **Typography**: Inter for body text and Manrope for display headings.
+- **Assets**: Logo and product imagery integrated from the provided high-resolution assets.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+© 2024 Dormigen®. Educational content only. Not medical advice.

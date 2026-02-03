@@ -1,0 +1,21 @@
+{
+  "name": "Dormigen® | Advanced EBV Suppression",
+  "short_name": "Dormigen",
+  "description": "Research-driven EBV suppression and immune support.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080c20",
+  "theme_color": "#4698da",
+  "icons": [
+    {
+      "src": "/dormigen-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dormigen-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
