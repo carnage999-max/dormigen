@@ -41,6 +41,74 @@ export const CONTENT = {
       },
     ]
   },
+  conditions: {
+    title: "Conditions Supported",
+    subtitle: "Dormigen® provides foundational immune and viral support across a broad spectrum of chronic and autoimmune conditions.",
+    categories: [
+      {
+        name: "Autoimmune & Inflammatory",
+        items: [
+          "Systemic lupus erythematosus (SLE)",
+          "Multiple sclerosis",
+          "Rheumatoid arthritis",
+          "Hashimoto’s thyroiditis",
+          "Graves’ disease",
+          "Sjögren’s syndrome",
+          "Inflammatory bowel disease (IBD)",
+          "Crohn’s disease",
+          "Ulcerative colitis",
+          "Psoriasis",
+          "Sarcoidosis",
+          "Vasculitis",
+          "Type 1 diabetes",
+          "Autoimmune hepatitis",
+          "Chronic inflammatory arthritis"
+        ]
+      },
+      {
+        name: "Neurological & Fatigue",
+        items: [
+          "Chronic fatigue syndrome (ME/CFS)",
+          "Fibromyalgia",
+          "Idiopathic peripheral neuropathy",
+          "Small fiber neuropathy",
+          "Migraine disorders",
+          "Postural orthostatic tachycardia syndrome (POTS)",
+          "Dysautonomia",
+          "Neuroinflammatory cognitive dysfunction (“brain fog”)",
+          "Chronic neuroimmune disorders"
+        ]
+      },
+      {
+        name: "Post-Viral & Chronic Infections",
+        items: [
+          "Post-viral fatigue syndromes",
+          "Long-COVID–like chronic inflammatory syndromes",
+          "Chronic Lyme-like post-infectious syndromes",
+          "Recurrent mononucleosis",
+          "Chronic viral reactivation syndromes",
+          "Latent virus–associated autoimmune conditions",
+          "Chronic immune exhaustion syndromes"
+        ]
+      },
+      {
+        name: "Organ-Specific & Other",
+        items: [
+          "Interstitial cystitis",
+          "Chronic prostatitis / pelvic pain",
+          "Endometriosis",
+          "Idiopathic cardiomyopathy",
+          "Myocarditis",
+          "Chronic sinusitis",
+          "Idiopathic thrombocytopenic purpura (ITP)",
+          "Primary biliary cholangitis",
+          "Idiopathic pulmonary fibrosis",
+          "Certain lymphomas",
+          "Mast cell activation-related disorders"
+        ]
+      }
+    ]
+  },
   benefits: [
     {
       id: 1,

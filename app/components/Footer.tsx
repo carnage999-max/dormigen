@@ -25,6 +25,7 @@ export const Footer = () => {
 
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16 text-white text-sm font-medium">
             <a href="#outcomes" className="hover:text-medical transition-colors">Outcomes</a>
+            <a href="#conditions" className="hover:text-medical transition-colors">Conditions</a>
             <a href="#science" className="hover:text-medical transition-colors">Science</a>
             <a href="#product" className="hover:text-medical transition-colors">Product</a>
             <a href="#faq" className="hover:text-medical transition-colors">FAQ</a>

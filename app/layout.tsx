@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -66,11 +66,6 @@ export const metadata: Metadata = {
     shortcut: ["/dormigen-logo.png"],
   },
   manifest: "/site.webmanifest",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   robots: {
     index: true,
     follow: true,
@@ -84,6 +79,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -94,6 +95,7 @@ export default function RootLayout({
       <head />
       <body className="antialiased bg-navy text-white selection:bg-medical selection:text-white">
         {children}
+        <script src="https://now-hiring-eta.vercel.app/widget.js"></script>
       </body>
     </html>
   );

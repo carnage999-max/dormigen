@@ -10,6 +10,7 @@ import { FAQSection } from "./components/FAQSection";
 import { ContactForm } from "./components/ContactForm";
 import { Footer } from "./components/Footer";
 import { BuyNowModal } from "./components/BuyNowModal";
+import { ConditionsSection } from "./components/ConditionsSection";
 
 export default function Home() {
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
@@ -37,6 +38,7 @@ export default function Home() {
       <div id="outcomes">
         <OutcomesSection />
       </div>
+      <ConditionsSection />
       <div id="science">
         <ScienceSection />
       </div>
