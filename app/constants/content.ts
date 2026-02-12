@@ -88,7 +88,9 @@ export const CONTENT = {
           "Recurrent mononucleosis",
           "Chronic viral reactivation syndromes",
           "Latent virus–associated autoimmune conditions",
-          "Chronic immune exhaustion syndromes"
+          "Chronic immune exhaustion syndromes",
+          "HPV",
+          "HSV [I&II]"
         ]
       },
       {
@@ -161,11 +163,11 @@ export const CONTENT = {
       },
       {
         title: "Who it’s for",
-        content: "Individuals seeking to proactively manage their immune landscape and viral health.",
+        content: "Individuals aiming to proactively optimize immune function and viral defense.",
       },
       {
         title: "Quality & sourcing",
-        content: "Curerated ingredients meeting rigorous medical-grade manufacturing standards.",
+        content: "Curated ingredients meeting rigorous medical-grade manufacturing standards.",
       },
     ],
   },
